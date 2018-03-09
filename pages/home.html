@@ -1,0 +1,11 @@
+<h1>Forecast by city</h1>
+
+<input type="text" placeholder="Search City" ng-model="city">
+
+<div>
+	<a href="#/forecast" ng-click="displayWeather($event)">Go</a>
+</div>
+
+<ul>
+	<li ng-repeat="weatherJson in forecast"> {{ 'Datum: '  + weatherJson.date + ' ' + ' Maksimalna Temperature: ' + weatherJson.maxtempC + ' ' + 'Minimalna Temperatura: ' +  weatherJson.mintempC}} </li>
+</ul>
